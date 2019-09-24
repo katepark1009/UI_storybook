@@ -14,7 +14,7 @@ const Title = styled.p`
   padding-left: 20px;
 `;
 
-const stories = storiesOf('ColorPicker', module);
+const stories = storiesOf('Color Picker', module);
 stories
   .addDecorator((story, context) => withInfo('ColorPicker')(story)(context))
   .addParameters({
