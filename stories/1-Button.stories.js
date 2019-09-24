@@ -1,17 +1,23 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import CodeExample from './components/CodeExample'
 
-export default {
-  title: 'Button',
-};
+const sample = `  import { fonts } from '@argo/principles';
 
-export const text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
+  const StyledText = styled.p\`
+    font-size: $\{fonts.size.Small};
+    font-family: $\{fonts.family.OpenSans};
+    font-weight: $\{fonts.weight.ExtraBold};
+  \`;`
 
-export const emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
+const stories = storiesOf('Code Picker', module);
+stories
+  .addDecorator((story, context) => withInfo('Code picker')(story)(context))
+  .add('Code picker', () => {
+    return (
+      <>
+        <CodeExample code={sample} />
+      </>
+    )
+  });
