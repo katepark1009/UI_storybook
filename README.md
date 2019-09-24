@@ -7,5 +7,5 @@ The tool enables developers to create components independently and showcase comp
 
 #### `npm run storybook` to open Storybook
 
-
+![](storybook.PNG)
 
