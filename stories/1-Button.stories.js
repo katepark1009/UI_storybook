@@ -11,7 +11,7 @@ const sample = `  import { fonts } from '@argo/principles';
     font-weight: $\{fonts.weight.ExtraBold};
   \`;`
 
-const stories = storiesOf('Code Picker', module);
+const stories = storiesOf('Code Example', module);
 stories
   .addDecorator((story, context) => withInfo('Code picker')(story)(context))
   .add('Code picker', () => {

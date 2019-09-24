@@ -16,13 +16,13 @@ const Title = styled.p`
 
 const stories = storiesOf('Color Picker', module);
 stories
-  .addDecorator((story, context) => withInfo('ColorPicker')(story)(context))
+  .addDecorator((story, context) => withInfo('ColorPalette')(story)(context))
   .addParameters({
     readme: {
       sidebar: readme
     }
   })
-  .add('Colors', () => {
+  .add('Color Palette', () => {
     return (
       <>
         <Title> ✔️Click the palette to copy the colors!</Title>
