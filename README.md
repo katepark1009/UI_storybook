@@ -6,7 +6,7 @@ The tool enables developers to create components independently and showcase comp
 - A Storybook is a collection of stories. Each story represents a single visual state of a component.
 
 #### `npm run storybook` to open Storybook
-#### [Live Demo](https://uistorybook.netlify.com/?path=/story/color-picker--color-palette)
+#### Check out [Live Demo](https://uistorybook.netlify.com/?path=/story/color-picker--color-palette) here.
 
 ![](storybook.PNG)
 
