@@ -1,6 +1,7 @@
 export const family = {
   opensans: '"Open Sans", sans-serif, Tahoma, Arial',
-  montserrat: 'Montserrat, sans-serif'
+  montserrat: 'Montserrat, sans-serif',
+  josefinSans: 'Josefin Sans, sans-serif'
 };
 
 export const size = {

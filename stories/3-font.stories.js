@@ -1,20 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { storiesOf } from '@storybook/react';
-import { select } from '@storybook/addon-knobs';
+import { select, text, withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import CodeExample from './components/CodeExample';
 import { fonts } from '../src/font';
 import readme from '../src/Typography.md';
 
-const StyledText = (props) => (
+const StyledText = (props) => {
+  console.log('moo', props)
+  return(
   <p style={{
     fontFamily: fonts.family[`${props.fontFamily}`],
     fontSize: fonts.size[`${props.fontSize}`],
     fontWeight: fonts.weight[`${props.fontWeight}`]}}
   >
-    Kelley Blue Book
+    {props.textSample}
   </p>
-)
+  )
+}
 
 const Title = styled.div`
   margin: 20px;
@@ -23,12 +26,13 @@ const Title = styled.div`
   }
 `;
 
-const FontWeightText = styled.p`
-  font-family: ${fonts.family.montserrat};
-  font-size: ${fonts.size['2XS']};
-`;
+// const FontWeightText = styled.p`
+//   font-family: ${fonts.family.montserrat};
+//   font-size: ${fonts.size['2XS']};
+// `;
 
 const makeExample = ( familyExample, sizeExample, weightExample ) => {
+  console.log(familyExample, sizeExample, weightExample)
   return(
     sizeExample === 'XL' || sizeExample === 'large' || sizeExample === 'medium' || sizeExample === 'small' || sizeExample === 'XS'?
     `  import { fonts } from '@argo/principles';
@@ -59,7 +63,8 @@ stories
       'Family',
       [
         'opensans',
-        'montserrat'
+        'montserrat',
+        'josefinSans'
       ]
       ,'montserrat'
     );
@@ -90,11 +95,15 @@ stories
       ],
       'semiBold (600)'
     );
+
+    let textSample = text(
+      'Text Sample', 'Hi, there!'
+    );
     return (
       <>
         <Title style={{fontFamily:fonts.family.montserrat}}>Example Text: </Title>
-        <StyledText fontFamily={family} fontSize={size} fontWeight={weight.slice(0,-6)}/>
-        <FontWeightText>Available Font weight : Open Sans(400, 600), Montserrat(500, 600, 800)</FontWeightText>
+        <StyledText textSample={textSample} fontFamily={family} fontSize={size} fontWeight={weight.slice(0,-6)} />
+        {/* <FontWeightText>Available Font weight : Open Sans(400, 600), Montserrat(500, 600, 800)</FontWeightText> */}
         <CodeExample code={makeExample(family, size, weight.slice(0,-6))}/>
       </>
     )
