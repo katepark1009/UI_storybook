@@ -43,7 +43,7 @@ const CodeText = styled.textarea`
   display: block;
   margin: 5px;
   width: 95%;
-  min-height:200px;
+  min-height:150px;
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
 `;
