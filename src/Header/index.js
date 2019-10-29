@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { Button } from 'reactstrap';
 
 export default (props) => {
   console.log(props)
