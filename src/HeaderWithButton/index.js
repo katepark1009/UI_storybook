@@ -48,7 +48,7 @@ export default (props) => {
     <>
       <Container>
       {title}
-      <StyledButton onClick={props.onClick} disable={props.disable}>{props.buttonText}</StyledButton>
+      <StyledButton onClick={props.disable? null: props.onClick} disable={props.disable}>{props.buttonText}</StyledButton>
       </Container>
       {props.isUnderline ? <hr className='mb-4' />: null}
     </>
