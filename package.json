@@ -6,7 +6,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-markdown-renderer": "^1.4.0",
-    "react-scripts": "3.1.2"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +36,7 @@
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
-    "@storybook/react": "^5.2.1",
+    "@storybook/react": "^9.1.1",
     "babel-loader": "^8.0.6",
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",
